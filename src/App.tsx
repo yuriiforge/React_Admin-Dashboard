@@ -6,6 +6,8 @@ import Users from './pages/Users/Users';
 import Layout from './components/Layout/Layout';
 import Login from './pages/Login/Login';
 import './styles/global.scss';
+import UserDetails from './pages/UserDetails/UserDetails';
+import ProductDetails from './pages/ProductDetails/ProductDetails';
 
 const router = createBrowserRouter([
   {
@@ -24,8 +26,17 @@ const router = createBrowserRouter([
         path: 'products',
         element: <Products />,
       },
+      {
+        path: 'users/:id',
+        element: <UserDetails />,
+      },
+      {
+        path: 'products/:id',
+        element: <ProductDetails />,
+      },
     ],
   },
+
   {
     path: '/login',
     element: <Login />,
