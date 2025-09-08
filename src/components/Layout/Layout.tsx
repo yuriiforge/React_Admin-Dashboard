@@ -4,6 +4,8 @@ import './layout.scss';
 import Footer from './Footer/Footer';
 import Menu from './Menu/Menu';
 import Navbar from './Navbar/Navbar';
+import { QueryClientProvider } from '@tanstack/react-query';
+import { queryClient } from '../../queryClient';
 
 const Layout = () => {
   return (
@@ -14,7 +16,9 @@ const Layout = () => {
           <Menu />
         </div>
         <div className="contentContainer">
-          <Outlet />
+          <QueryClientProvider client={queryClient}>
+            <Outlet />
+          </QueryClientProvider>
         </div>
       </div>
       <Footer />
