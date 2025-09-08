@@ -13,7 +13,7 @@ const Layout = () => {
         <div className="menuContainer">
           <Menu />
         </div>
-        <div className="contactContainer">
+        <div className="contentContainer">
           <Outlet />
         </div>
       </div>
