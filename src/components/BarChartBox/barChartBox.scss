@@ -1,3 +1,5 @@
+@use '../../styles/responsive.scss' as *;
+
 .barChartBox {
   width: 100%;
   height: 100%;
@@ -5,5 +7,9 @@
   h1 {
     font-size: 20px;
     margin-bottom: 20px;
+
+    @include xxl {
+      font-size: 24px;
+    }
   }
 }
